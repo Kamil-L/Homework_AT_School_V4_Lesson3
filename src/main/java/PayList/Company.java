@@ -4,19 +4,28 @@ import java.util.ArrayList;
 
 public class Company {
 
-    public static ArrayList<Employee> employeesData;
+    private final ArrayList<Employee> employeesData;
 
-    public static void printEmployeesData(ArrayList<Employee> employeesData) {
+    public Company() {
+        this.employeesData = new ArrayList<>();
+    }
+
+    public void printEmployeesData() {
         for (Employee allEmpData : employeesData) {
             System.out.println(allEmpData);
         }
     }
 
-    public static void sumOfEmployeesSalary(ArrayList<Employee> employeesData) {
+    public void sumOfEmployeesSalary() {
         double sumOfSalaryOfAllEmployees = 0;
         for (Employee allEmpData : employeesData) {
             sumOfSalaryOfAllEmployees += allEmpData.getSalary();
         }
         System.out.print("Sum of salary of all employees is: " + sumOfSalaryOfAllEmployees + "\n\n");
+    }
+
+    public void addEmployee(Employee employee) {
+        employeesData.add(employee);
+
     }
 }

@@ -1,6 +1,17 @@
 package PayList;
 
-public record Employee(String name, String surname, double salary) {
+public class Employee {
+
+    private final String name;
+    private final String surname;
+    private final double salary;
+
+    public Employee(String name, String surname, double salary) {
+        this.name = name;
+        this.surname = surname;
+        this.salary = salary;
+    }
+
 
     public String getName() {
         return name;
